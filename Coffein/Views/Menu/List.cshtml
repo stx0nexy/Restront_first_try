@@ -1,0 +1,13 @@
+﻿<h1>Все позиции меню:</h1>
+<h3>@Model.currCategory</h3>
+@{
+    foreach(var menucs in Model.allMenu)
+    {
+        <div>
+        <h2>Позиция: @menucs.name</h2>
+        <p>Цена: @menucs.price.ToString("c")</p>
+        <p>Описание: @menucs.longDesc</p>
+        </div>
+    }
+}
+
