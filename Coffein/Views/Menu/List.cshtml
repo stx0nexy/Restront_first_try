@@ -1,13 +1,52 @@
 ﻿<h1>Все позиции меню:</h1>
 <h3>@Model.currCategory</h3>
-@{
-    foreach(var menucs in Model.allMenu)
-    {
-        <div>
-        <h2>Позиция: @menucs.name</h2>
-        <p>Цена: @menucs.price.ToString("c")</p>
-        <p>Описание: @menucs.longDesc</p>
+
+<div id="pg-138-2" class="panel-grid panel-has-style">
+    <div class="siteorigin-panels-stretch panel-row-style-full-width panel-row-style panel-row-style-for-138-2" data-stretch-type="full" style="margin-left: -30px; margin-right: -30px; padding-left: 30px; padding-right: 30px; border-left: 0px; border-right: 0px;">
+        <div id="pgc-138-2-0" class="panel-grid-cell">
+            <div id="panel-138-2-0-0" class="so-panel widget widget_restaurantz-special-dishes panel-first-child panel-last-child" data-index="2">
+                <div class="so-widget-restaurantz-special-dishes so-widget-restaurantz-special-dishes-default-d75171398898-138">
+                    <h3 class="widget-title">Меню нашего заведения</h3>
+                    <div class="special-dishes-main special-dishes-column-4">
+                        <div class=" row mt-5 mb-2">
+                            @{
+                                foreach (var menucs in Model.allMenu)
+                                {
+                                    <div class=" col-lg-4">
+                                        <div class="special-dishes-item">
+                                            <div class="special-dishes-content">
+                                                <div class="special-dishes-title">
+                                                    <h3>
+                                                        <a href="https://demo.wenthemes.com/restaurantz/item/beef-grill-2/">
+                                                            @menucs.name
+                                                        </a>
+                                                    </h3>
+                                                </div><!-- .special-dishes-title -->
+
+                                                <div class="special-dishes-thumb">
+                                                    <img src="@menucs.img" alt="@menucs.name" width="350" height="250">
+                                                </div><!-- .special-dishes-thumb -->
+
+                                                <div class="special-dishes-meta">
+                                                    <span class="menu-price">@menucs.price.ToString("c")</span>
+                                                    <a href="https://demo.wenthemes.com/restaurantz/menu/food/"><span class="menu-category">@menucs.Categories.categoryName</span></a>
+                                                </div><!-- .special-dishes-meta -->
+
+                                            </div><!-- .special-dishes-content -->
+
+                                            <div class="special-dishes-excerpt">
+                                                <p>@menucs.shortDesc</p>
+                                            </div><!-- .special-dishes-excerpt -->
+                                        </div><!-- .special-dishes-item -->
+                                        
+                                    </div>
+                                }
+                            }
+                        </div>
+                        </div><!-- .special-dishes-main -->
+                  </div>
+            </div>
         </div>
-    }
-}
+    </div>
+</div>
 
